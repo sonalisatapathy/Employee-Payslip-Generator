@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee PaySlip Generator</title>
+    <link rel="stylesheet" href="assignment17_CSS.css">
+    <script src="assignment17_JS.js"></script>
+</head>
+<body>
+     <h2>Employee Details</h2>
+    <ul>
+        <li>
+            <div class="label">
+                <label>Employee Name:-</label>
+            </div>
+            <div class="empdet">
+                <input type="text" id="ename" placeholder="Enter in Block letter" onkeypress=" return DataValidation(event)">
+                <div id="Name">
+                    Please Enter Value in Capital Letter!
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="label">
+                <label>Employee Department:-</label>
+            </div>
+            <div class="empdet">
+                <input type="text" id="edept" >
+            </div> 
+        </li>
+        <li>
+            <div class="label">
+                <label>Employee Age:-</label>
+            </div>
+            <div class="empdet">
+               <select name="" id="eage">
+                   <option value="21-30">21-30</option>
+                   <option value="31-40">31-40</option>
+                   <option value="41-50">41-50</option>
+                   <option value="51-60">51-60</option>
+
+               </select>
+            </div>
+        </li>
+        <li>
+            <div class="label">
+                <label>Employee Gender:-</label>
+            </div>
+            <div class="empdet">
+                <input type="radio" name="gend" class="egend" value="male">Male
+                <input type="radio" name="gend" class="egend" value="female">Female
+                <input type="radio" name="gend" class="egend" value="transgender">Transgender
+            </div>
+        </li>
+        <li>
+            <div class="label">
+                <label>Employee BasicSalary:-</label>
+            </div>
+            <div class="empdet">
+                <input type="text" id="ebSal" placeholder="Enter in rupees" onkeypress=" return dataValidForSal(event)">
+                <div id="Rs">
+                    Plese Enter number in between 0 to 9!
+                </div>
+            </div>
+        </li>
+        <li id="button" >
+            <input type="button" value="Click here to get your PaySlip" onclick="getEmpData();">
+        </li>
+    </ul>
+
+    <div class="showDataBackToUser">
+        <ul>
+            <li>
+                <label>Employee Name:-</label>
+                <span id="Empname"> </span>
+            </li>
+            <li>
+                <label>Employee Gender:-</label>
+                <span id="Empgender"> </span>
+            </li>
+            <li>
+                <label>Employee BasicSalary:-</label>
+                <span id="EmpbasicSal"> </span>
+            </li>
+            <li>
+                <label>Employee hra:-</label>
+                <span id="Emphra"> </span>
+            </li>
+            <li>
+                <label>Employee pf:-</label>
+                <span id="Emppf"> </span>
+            </li>
+            <li>
+                <label>Employee totalSalary:-</label>
+                <span id="EmpTotalSal"> </span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
